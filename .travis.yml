@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t heinwintsoe/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run heinwintsoe/docker-reat npm run start -- --coverage
