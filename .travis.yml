@@ -6,4 +6,4 @@ before_install:
   - docker build -t heinwintsoe/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run heinwintsoe/docker-react npm run start -- --coverage
+  - docker run heinwintsoe/docker-react npm run test -- --coverage
